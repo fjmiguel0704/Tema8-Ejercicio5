@@ -5,12 +5,12 @@ public class Rectangulo extends Poligono {
 	private double lado1 = 1;
 	private double lado2 = 1;
 
-	public Rectangulo(int numeroLados) {
-		super(numeroLados);
+	public Rectangulo(int numLados) {
+		super(numLados);
 	}
 
-	public Rectangulo(int numeroLados, double lado1, double lado2) {
-		super(numeroLados);
+	public Rectangulo(int numLados, double lado1, double lado2) {
+		super(numLados);
 		if (lado1 > 0) {
 			this.lado1 = lado1;
 		}
@@ -37,11 +37,15 @@ public class Rectangulo extends Poligono {
 
 	@Override
 	public double area() {
-		return lado1 * lado2;
+		double result;
+		result = lado1 * lado2;
+		return result;
 	}
 
 	@Override
 	public String toString() {
-		return "Rectángulo: " + lado1 + "," + lado2 + "--> " + area() + "\n";
+		String result;
+		result = "Área del rectángulo: " + lado1 + "*" + lado2 +  ": " + area();
+		return result;
 	}
 }

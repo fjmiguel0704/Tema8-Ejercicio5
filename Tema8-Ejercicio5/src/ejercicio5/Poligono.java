@@ -2,22 +2,24 @@ package ejercicio5;
 
 public abstract class Poligono {
 
-	protected int numeroLados = 3;
+	protected int numLados = 3;
 
 	abstract public double area();
 
 	public Poligono(int numeroLados) {
 		super();
 		if (numeroLados >= 3)
-			this.numeroLados = numeroLados;
+			this.numLados = numeroLados;
 	}
 
 	public int getNumeroLados() {
-		return numeroLados;
+		return numLados;
 	}
 
 	@Override
 	public String toString() {
-		return "Numero de lados: " + numeroLados;
+		String result;
+		result = "Lados: " + numLados;
+		return result;
 	}
 }

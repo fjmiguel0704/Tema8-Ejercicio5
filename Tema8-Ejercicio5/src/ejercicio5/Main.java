@@ -16,15 +16,19 @@ public class Main {
 		Scanner read = new Scanner(System.in);
 
 		do {
-			System.out.println("Introduzca una opción ");
-			System.out.println("1. Introducir triangulo");
-			System.out.println("2. Introducir rectangulo");
-			System.out.println("3. Mostrar el contenido del array");
+			System.out.println("MENÚ");
+			System.out.println("====================================");
+			System.out.println("1. TRIANGULO");
+			System.out.println("2. RECTANGULO");
+			System.out.println("3. LISTADO ARRAY");
+			System.out.println("4. SALIR");
+			System.out.println();
+			System.out.println("Elige una opción: ");
 			opcion = read.nextInt();
 
 			switch (opcion) {
 			case 1:
-				System.out.println("Introduzca los lados del triangulo de mayor a menor");
+				System.out.println("Lados del triangulo: ");
 				lado1 = read.nextDouble();
 				lado2 = read.nextDouble();
 				lado3 = read.nextDouble();
@@ -33,7 +37,7 @@ public class Main {
 				poligonos[poligonos.length - 1] = new Triangulo(3, lado1, lado2, lado3);
 				break;
 			case 2:
-				System.out.println("Introduzca los lados del rectangulo de mayor a menor");
+				System.out.println("Lados del rectangulo: ");
 				lado1 = read.nextDouble();
 				lado2 = read.nextDouble();
 
@@ -48,15 +52,13 @@ public class Main {
 
 				break;
 			case 4:
-				System.out.println("Se ha cerrado el programa");
+				System.out.println("Saliendo...");
 				break;
 			default:
-				System.out.println("Opcion no válida");
+				System.out.println("La opción no es correcta");
 			}
 
 		} while (opcion != 4);
-
-		read.close();
 
 	}
 

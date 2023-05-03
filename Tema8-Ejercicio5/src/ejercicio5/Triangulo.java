@@ -49,12 +49,18 @@ public class Triangulo extends Poligono {
 
 	@Override
 	public double area() {
-		return (lado1 + lado2 + lado3) / 2;
+		double area;
+		double heron;
+		area = (lado1 + lado2 + lado3) / 2;
+		heron = Math.sqrt(area * (area - lado1) * (area - lado2) * (area - lado3));
+		return heron;
 	}
 
 	@Override
 	public String toString() {
-		return "Triangulo: " + lado1 + " ," + lado2 + ", " + lado3 + " -->" + area() + "\n";
+		String result;
+		result = "Área del triángulo, fórmula herón: " + area();
+		return result;
 	}
 
 }
